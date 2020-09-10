@@ -8,6 +8,15 @@ public class Person {
     private String gender;
     private String emailAddress;
 
+    public Person(String firstName, String lastName, int age, String gender, String emailAddress){
+        this.firstName = firstName;
+        this.lastName= lastName;
+        this.age = age;
+        this.gender = gender;
+        this.emailAddress = emailAddress;
+    }
+
+
     public String getFirstName() {
         return firstName;
     }
