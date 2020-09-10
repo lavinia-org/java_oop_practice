@@ -46,7 +46,11 @@ public class Person {
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+        if (gender.equals("Male") || gender.equals("Female") || gender.equals("Other")){
+            this.gender = gender;
+        } else{
+            System.out.println("Error! Please enter a valid gender!");
+        }
     }
 
     public String getEmailAddress() {
