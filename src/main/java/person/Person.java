@@ -65,5 +65,9 @@ public class Person {
             System.out.println("Error! Please enter a valid email address!");
         }
     }
-    
+
+    public void printPersonDetails(){
+        System.out.println(firstName + ", " + lastName + ", " + age + ", " + gender + ", " + emailAddress);
+    }
+
 }
