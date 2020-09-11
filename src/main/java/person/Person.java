@@ -65,9 +65,5 @@ public class Person {
             System.out.println("Error! Please enter a valid email address!");
         }
     }
-
-
-
-
-
+    
 }
