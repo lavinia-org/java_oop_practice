@@ -55,7 +55,11 @@ public class Person {
     }
 
     public String getEmailAddress() {
-        return emailAddress;
+        if(!isEmailRestricted){
+            return emailAddress;
+        } else {
+           return "Email information is restricted for this customer";
+        }
     }
 
     public void setEmailAddress(String emailAddress) {
