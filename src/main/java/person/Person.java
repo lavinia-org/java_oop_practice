@@ -7,6 +7,7 @@ public class Person {
     private int age;
     private String gender;
     private String emailAddress;
+    private boolean isEmailRestricted;
 
     public Person(String firstName, String lastName, int age, String gender, String emailAddress){
         this.firstName = firstName;
@@ -64,6 +65,14 @@ public class Person {
         } else{
             System.out.println("Error! Please enter a valid email address!");
         }
+    }
+
+    public boolean isEmailRestricted() {
+        return isEmailRestricted;
+    }
+
+    public void setEmailRestricted(boolean emailRestricted) {
+        isEmailRestricted = emailRestricted;
     }
 
     public void printPersonDetails(){
