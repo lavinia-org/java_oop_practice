@@ -15,4 +15,27 @@ public class Student extends Person {
         this.interviewScore = interviewScore;
     }
 
+    public Boolean getGraduated() {
+        return graduated;
+    }
+
+    public void setGraduated(Boolean graduated) {
+        this.graduated = graduated;
+    }
+
+    public int getInterviewScore() {
+        return interviewScore;
+    }
+
+    public void setInterviewScore(int interviewScore) {
+        this.interviewScore = interviewScore;
+    }
+
+    public Map<String, Integer> getDisciplineMarks() {
+        return disciplineMarks;
+    }
+
+    public void setDisciplineMarks(Map<String, Integer> disciplineMarks) {
+        this.disciplineMarks = disciplineMarks;
+    }
 }
