@@ -38,4 +38,8 @@ public class Student extends Person {
     public void setDisciplineMarks(Map<String, Integer> disciplineMarks) {
         this.disciplineMarks = disciplineMarks;
     }
+
+    public void addDisciplineMark(String discipline, int mark){
+        disciplineMarks.put(discipline, mark);
+    }
 }
