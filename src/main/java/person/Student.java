@@ -42,4 +42,15 @@ public class Student extends Person {
     public void addDisciplineMark(String discipline, int mark){
         disciplineMarks.put(discipline, mark);
     }
+
+    public Double calculateAverageDisciplinesScore(){
+        double sum = 0.0;
+        double size = disciplineMarks.size();
+
+        for (int value : disciplineMarks.values()){
+            sum += value;
+        }
+        double averageScore = sum / size;
+        return averageScore;
+    }
 }
