@@ -3,6 +3,8 @@ package person;
 import org.apache.commons.collections4.MultiValuedMap;
 import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
 
+import java.io.IOException;
+
 public class Trainer extends Person{
     private String specialization;
     private int yearsOfExperience;
@@ -40,24 +42,20 @@ public class Trainer extends Person{
      * @param studentName
      * @param mark
      */
-    public void addFeedback(String studentName, Integer mark){
+    public void addFeedback(String studentName, Integer mark) throws Exception {
         if(mark>=0 && mark <=10){
             feedback.put(studentName, mark);
-        } else {
-            System.out.println("Please provide a mark from 0 to 10");
-        }
+        } else throw new Exception("Please provide a mark from 0 to 10");
     }
 
     /**
      * Overloading method// Adds values to feedback map for desired Trainer
      * @param mark
      */
-    public void addFeedback(Integer mark){
+    public void addFeedback(Integer mark) throws Exception {
         if(mark>=0 && mark <=10){
             feedback.put("Anonymous student", mark);
-        } else {
-            System.out.println("Please provide a value from 0 to 10");
-        }
+        } else throw new Exception("Please provide a mark from 0 to 10");
     }
 
     /**
