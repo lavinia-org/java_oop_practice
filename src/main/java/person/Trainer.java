@@ -59,4 +59,12 @@ public class Trainer extends Person{
             System.out.println("Please provide a value from 0 to 10");
         }
     }
+
+    /**
+     * Overriding print method from Person class to print Trainer details
+     */
+    @Override
+    public void printPersonDetails() {
+        System.out.println(super.getFirstName() + ", " + super.getLastName() + ", " + specialization + ", " + yearsOfExperience);
+    }
 }
