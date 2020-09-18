@@ -1,12 +1,12 @@
 package person;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.apache.commons.collections4.MultiValuedMap;
+import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
 
 public class Trainer extends Person{
     private String specialization;
     private int yearsOfExperience;
-    private Map<String, Integer> feedback = new HashMap<>();
+    private MultiValuedMap<String, Integer> feedback = new ArrayListValuedHashMap<>();
 
     public Trainer(String firstName, String lastName, String specialization, int yearsOfExperience) {
         super(firstName, lastName);
@@ -31,7 +31,7 @@ public class Trainer extends Person{
         this.yearsOfExperience = yearsOfExperience;
     }
 
-    public Map<String, Integer> getFeedback() {
+    public MultiValuedMap<String, Integer> getFeedback() {
         return feedback;
     }
 
