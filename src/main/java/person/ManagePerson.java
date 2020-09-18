@@ -35,12 +35,16 @@ public class ManagePerson {
         mathTrainer.addFeedback("Ben Smith", 9);
         mathTrainer.addFeedback(11);
         mathTrainer.addFeedback(8);
-        mathTrainer.addFeedback(4);
+        mathTrainer.addFeedback(3);
         //print feedback for second trainer
         System.out.println(mathTrainer.getFeedback());
 
         //print details for both trainers
         englishTrainer.printPersonDetails();
         mathTrainer.printPersonDetails();
+
+        //see average score feedback for both trainers
+        System.out.println(englishTrainer.averageScoreFeedback());
+        System.out.println(mathTrainer.averageScoreFeedback());
     }
 }

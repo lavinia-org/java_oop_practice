@@ -67,4 +67,18 @@ public class Trainer extends Person{
     public void printPersonDetails() {
         System.out.println(super.getFirstName() + ", " + super.getLastName() + ", " + specialization + ", " + yearsOfExperience);
     }
+
+    /**
+     * Calculate average score for each trainer
+     * @return
+     */
+    public Double averageScoreFeedback() {
+        double sum = 0.0;
+        int totalMarks = feedback.size();
+        for (int value : feedback.values()) {
+            sum += value;
+        }
+        double avgScore = sum / totalMarks;
+        return avgScore;
+    }
 }
