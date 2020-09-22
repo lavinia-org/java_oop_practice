@@ -78,5 +78,8 @@ public class ManagePerson {
 
         //See max average score of a student
         System.out.println(sv20.highestAverageScore());
+
+        //See max average score of a student
+        System.out.println(sv20.highestFeedbackScore());
     }
 }

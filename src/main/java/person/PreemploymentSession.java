@@ -108,4 +108,15 @@ public class PreemploymentSession {
         }
         return maxScore;
     }
+
+    public double highestFeedbackScore(){
+        double maxScore = 0.0;
+        for (int i = 0; i < trainers.size(); i++){
+            double averageScore = trainers.get(i).averageScoreFeedback();
+            if(maxScore < averageScore){
+                maxScore = averageScore;
+            }
+        }
+        return maxScore;
+    }
 }
