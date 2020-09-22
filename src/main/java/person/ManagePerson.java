@@ -49,5 +49,11 @@ public class ManagePerson {
 
         //call print student Catalog method
         Student.printStudentCatalog();
+
+        //Creating and instantiating pre-employment object
+        PreemploymentSession sv20 = new PreemploymentSession(2020, "QA", "Auto");
+        PreemploymentSession sv21 = new PreemploymentSession(2021, "QA", "Test");
+        System.out.println(sv20.getType());
+        System.out.println(sv21.getType());
     }
 }
