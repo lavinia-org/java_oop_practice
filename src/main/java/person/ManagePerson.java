@@ -52,8 +52,17 @@ public class ManagePerson {
 
         //Creating and instantiating pre-employment object
         PreemploymentSession sv20 = new PreemploymentSession(2020, "QA", "Auto");
-        PreemploymentSession sv21 = new PreemploymentSession(2021, "QA", "Test");
+        PreemploymentSession sv21 = new PreemploymentSession(2021, "QA", "Manual");
         System.out.println(sv20.getType());
         System.out.println(sv21.getType());
+
+        //Add students to students list
+        sv20.addStudentToList(maryStudent);
+        sv20.addStudentToList(benStudent);
+        sv21.addStudentToList(johnStudent);
+
+        //See students lists
+       sv20.printStudentList();
+       sv21.printStudentList();
     }
 }
