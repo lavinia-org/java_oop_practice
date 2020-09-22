@@ -1,5 +1,8 @@
 package person;
 
+import org.w3c.dom.ls.LSOutput;
+
+import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,11 +72,12 @@ public class PreemploymentSession {
     /**
      * Print the students list
      */
-    public  void printStudentList(){
-        System.out.println("This is a students list:");
+    public List<String> printStudentList(){
+       List<String> studentName = new ArrayList<>();
         for (Student student1 : students){
-            System.out.println(student1.getFirstName() + " " + student1.getLastName());
+            studentName.add(student1.getFirstName() + " " + student1.getLastName());
         }
+         return studentName;
     }
 
     /**
@@ -87,11 +91,12 @@ public class PreemploymentSession {
     /**
      * Print the trainers list
      */
-    public void printTrainerList(){
-        System.out.println("This is a trainers list:");
+    public List<String> printTrainerList(){
+        List<String> trainerName = new ArrayList<>();
         for (Trainer trainer1: trainers) {
-            System.out.println(trainer1.getFirstName() + " " + trainer1.getLastName());
+            trainerName.add(trainer1.getFirstName() + " " + trainer1.getLastName());
         }
+        return trainerName;
     }
 
     /**
@@ -109,6 +114,10 @@ public class PreemploymentSession {
         return maxScore;
     }
 
+    /**
+     * Check the highest average feedback score for a trainer
+     * @return
+     */
     public double highestFeedbackScore(){
         double maxScore = 0.0;
         for (int i = 0; i < trainers.size(); i++){
@@ -118,5 +127,13 @@ public class PreemploymentSession {
             }
         }
         return maxScore;
+    }
+
+    public void printPreemploymentDetails(){
+        System.out.println("This is the Pre-employment session: " + community + " " + type + " " + year + "\n" +
+                "These are the students who participated: " + printStudentList() + "\n" +
+                "Highest average score of a student was: " + highestAverageScore() + "\n" +
+                "These were the trainers: " + printTrainerList() + "\n" +
+                "Highest feedback score of a trainer was: " + highestFeedbackScore());
     }
 }

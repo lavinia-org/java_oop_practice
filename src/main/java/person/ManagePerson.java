@@ -63,23 +63,25 @@ public class ManagePerson {
         //Add students to students list
         sv20.addStudentToList(maryStudent);
         sv20.addStudentToList(benStudent);
+        sv20.addStudentToList(lauraStudent);
         sv21.addStudentToList(johnStudent);
 
         //See students list
-       sv20.printStudentList();
-       sv21.printStudentList();
+        System.out.println(sv20.printStudentList());
 
        //Add trainers to trainers list
         sv20.addTrainerToList(englishTrainer);
         sv20.addTrainerToList(mathTrainer);
 
         //See trainers list
-        sv20.printTrainerList();
+        System.out.println(sv20.printTrainerList());
 
         //See max average score of a student
         System.out.println(sv20.highestAverageScore());
 
         //See max average score of a student
         System.out.println(sv20.highestFeedbackScore());
+
+        sv20.printPreemploymentDetails();
     }
 }
