@@ -17,8 +17,8 @@ public class ManagePerson {
 
         System.out.println(maryStudent.calculateAverageDisciplinesScore());
 
-        Student johnStudent = new Student("John", "Smith", true, 9, "&codeFromJohnStudent ");
-        Student benStudent = new Student("Ben", "Smith", false, 4, "&codeFromBenStudent ");
+        Student johnStudent = new Student("John", "Davis", true, 9, "&codeFromJohnStudent ");
+        Student benStudent = new Student("Ben", "Miller", false, 4, "&codeFromBenStudent ");
         Student lauraStudent = new Student("Laura", "Smith", true, 8, "&codeFromLauraStudent ");
         System.out.println("Repository contains code from: " + Student.getCode());
 
@@ -33,7 +33,7 @@ public class ManagePerson {
         //adding details & feedback for second Trainer
         Trainer mathTrainer = new Trainer("Anna", "Miller", "Math", 9);
         mathTrainer.addFeedback("Ben Smith", 9);
-        mathTrainer.addFeedback(11);
+        mathTrainer.addFeedback(10);
         mathTrainer.addFeedback(8);
         mathTrainer.addFeedback(3);
         //print feedback for second trainer
@@ -46,5 +46,8 @@ public class ManagePerson {
         //see average score feedback for both trainers
         System.out.println(englishTrainer.averageScoreFeedback());
         System.out.println(mathTrainer.averageScoreFeedback());
+
+        //call print student Catalog method
+        Student.printStudentCatalog();
     }
 }

@@ -1,19 +1,20 @@
 package person;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Student extends Person {
    private Boolean graduated;
    private static String code = " ";
    private int interviewScore;
    private Map<String, Integer> disciplineMarks = new HashMap<String, Integer>();
+   private  static List<String> studentCatalog = new ArrayList<>();
 
     public Student(String firstName, String lastName, Boolean graduated, int interviewScore, String code) {
         super(firstName, lastName);
         this.graduated = graduated;
         this.interviewScore = interviewScore;
         Student.code += code;
+        studentCatalog.add(this.getLastName() + " " + getFirstName());
     }
 
     public static String getCode() {
@@ -44,6 +45,14 @@ public class Student extends Person {
         return disciplineMarks;
     }
 
+    public static List<String> getStudentCatalog() {
+        return studentCatalog;
+    }
+
+    public static void setStudentCatalog(List<String> studentCatalog) {
+        studentCatalog = studentCatalog;
+    }
+
     public void setDisciplineMarks(Map<String, Integer> disciplineMarks) {
         this.disciplineMarks = disciplineMarks;
     }
@@ -61,5 +70,15 @@ public class Student extends Person {
         }
         double averageScore = sum / size;
         return averageScore;
+    }
+
+    /**
+     * Sort and print student catalog list
+     */
+    public static void printStudentCatalog(){
+        Collections.sort(studentCatalog);
+        for (String name : studentCatalog){
+            System.out.println(name);
+        }
     }
 }
