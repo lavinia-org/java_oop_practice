@@ -61,8 +61,15 @@ public class ManagePerson {
         sv20.addStudentToList(benStudent);
         sv21.addStudentToList(johnStudent);
 
-        //See students lists
+        //See students list
        sv20.printStudentList();
        sv21.printStudentList();
+
+       //Add trainers to trainers list
+        sv20.addTrainerToList(englishTrainer);
+        sv20.addTrainerToList(mathTrainer);
+
+        //See trainers list
+        sv20.printTrainerList();
     }
 }

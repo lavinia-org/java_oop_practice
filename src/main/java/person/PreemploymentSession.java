@@ -8,6 +8,7 @@ public class PreemploymentSession {
     private String community;
     private String type;
     private List<Student> students = new ArrayList<>();
+    private List<Trainer> trainers = new ArrayList<>();
 
     public PreemploymentSession(int year, String community, String type) throws Exception {
         this.year = year;
@@ -49,6 +50,14 @@ public class PreemploymentSession {
         this.students = students;
     }
 
+    public List<Trainer> getTrainers() {
+        return trainers;
+    }
+
+    public void setTrainers(List<Trainer> trainers) {
+        this.trainers = trainers;
+    }
+
     /**
      * add student to students list
      * @param student
@@ -61,8 +70,27 @@ public class PreemploymentSession {
      * Print the students list
      */
     public  void printStudentList(){
+        System.out.println("This is a students list:");
         for (Student student1 : students){
-            System.out.println(student1.getLastName() + " " + student1.getFirstName());
+            System.out.println(student1.getFirstName() + " " + student1.getLastName());
+        }
+    }
+
+    /**
+     * add trainer to trainers list
+     * @param trainer
+     */
+    public void addTrainerToList(Trainer trainer){
+        trainers.add(trainer);
+    }
+
+    /**
+     * Print the trainers list
+     */
+    public void printTrainerList(){
+        System.out.println("This is a trainers list:");
+        for (Trainer trainer1: trainers) {
+            System.out.println(trainer1.getFirstName() + " " + trainer1.getLastName());
         }
     }
 }
