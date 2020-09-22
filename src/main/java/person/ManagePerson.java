@@ -18,7 +18,11 @@ public class ManagePerson {
         System.out.println(maryStudent.calculateAverageDisciplinesScore());
 
         Student johnStudent = new Student("John", "Davis", true, 9, "&codeFromJohnStudent ");
+        johnStudent.addDisciplineMark("Math", 8);
+        johnStudent.addDisciplineMark("English", 6);
         Student benStudent = new Student("Ben", "Miller", false, 4, "&codeFromBenStudent ");
+        benStudent.addDisciplineMark("Math", 7);
+        benStudent.addDisciplineMark("English", 10);
         Student lauraStudent = new Student("Laura", "Smith", true, 8, "&codeFromLauraStudent ");
         System.out.println("Repository contains code from: " + Student.getCode());
 
@@ -71,5 +75,8 @@ public class ManagePerson {
 
         //See trainers list
         sv20.printTrainerList();
+
+        //See max average score of a student
+        System.out.println(sv20.highestAverageScore());
     }
 }

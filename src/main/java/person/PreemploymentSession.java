@@ -93,4 +93,19 @@ public class PreemploymentSession {
             System.out.println(trainer1.getFirstName() + " " + trainer1.getLastName());
         }
     }
+
+    /**
+     * Check the highest average score for a student
+     * @return
+     */
+    public double highestAverageScore(){
+        double maxScore= 0.0;
+        for (int i = 0; i < students.size(); i++){
+            double averageScore = students.get(i).calculateAverageDisciplinesScore();
+            if(maxScore < averageScore){
+                maxScore = averageScore;
+            }
+        }
+        return maxScore;
+    }
 }
