@@ -13,7 +13,7 @@ public class PreemploymentSession {
     private List<Student> students = new ArrayList<>();
     private List<Trainer> trainers = new ArrayList<>();
 
-    public PreemploymentSession(int year, String community, String type) throws Exception {
+    public PreemploymentSession(int year, String community, String type){
         this.year = year;
         this.community = community;
         this.setType(type);
@@ -39,10 +39,10 @@ public class PreemploymentSession {
         return type;
     }
 
-    public void setType(String type) throws Exception {
+    public void setType(String type) throws IllegalArgumentException {
         if (type.equals("Auto") || type.equals("Manual")){
             this.type = type;
-        } else throw new Exception("Please enter a valid type!");
+        } else throw new IllegalArgumentException ("Please enter a valid type!");
     }
 
     public List<Student> getStudents() {
@@ -70,9 +70,10 @@ public class PreemploymentSession {
     }
 
     /**
-     * Print the students list
+     *
+     * @return
      */
-    public List<String> printStudentList(){
+    public List<String> returnStudentList(){
        List<String> studentName = new ArrayList<>();
         for (Student student1 : students){
             studentName.add(student1.getFirstName() + " " + student1.getLastName());
@@ -89,9 +90,10 @@ public class PreemploymentSession {
     }
 
     /**
-     * Print the trainers list
+     *
+     * @return
      */
-    public List<String> printTrainerList(){
+    public List<String> returnTrainerList(){
         List<String> trainerName = new ArrayList<>();
         for (Trainer trainer1: trainers) {
             trainerName.add(trainer1.getFirstName() + " " + trainer1.getLastName());
@@ -129,11 +131,14 @@ public class PreemploymentSession {
         return maxScore;
     }
 
+    /**
+     * Print all preemployment details
+     */
     public void printPreemploymentDetails(){
         System.out.println("This is the Pre-employment session: " + community + " " + type + " " + year + "\n" +
-                "These are the students who participated: " + printStudentList() + "\n" +
+                "These are the students who participated: " + returnStudentList() + "\n" +
                 "Highest average score of a student was: " + highestAverageScore() + "\n" +
-                "These were the trainers: " + printTrainerList() + "\n" +
+                "These were the trainers: " + returnTrainerList() + "\n" +
                 "Highest feedback score of a trainer was: " + highestFeedbackScore());
     }
 }

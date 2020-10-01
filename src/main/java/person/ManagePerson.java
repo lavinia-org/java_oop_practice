@@ -67,14 +67,14 @@ public class ManagePerson {
         sv21.addStudentToList(johnStudent);
 
         //See students list
-        System.out.println(sv20.printStudentList());
+        System.out.println(sv20.returnStudentList());
 
        //Add trainers to trainers list
         sv20.addTrainerToList(englishTrainer);
         sv20.addTrainerToList(mathTrainer);
 
         //See trainers list
-        System.out.println(sv20.printTrainerList());
+        System.out.println(sv20.returnTrainerList());
 
         //See max average score of a student
         System.out.println(sv20.highestAverageScore());
@@ -82,6 +82,7 @@ public class ManagePerson {
         //See max average score of a student
         System.out.println(sv20.highestFeedbackScore());
 
+        //Print all preemployment details
         sv20.printPreemploymentDetails();
     }
 }
